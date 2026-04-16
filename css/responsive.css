@@ -1,0 +1,132 @@
+/* Mobile First System */
+:root {
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
+}
+
+/* =========================
+   GLOBAL RESPONSIVENESS CORE
+========================= */
+
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .folder-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HERO */
+  .hero-content h1 {
+    font-size: 3.2rem !important;
+    line-height: 1;
+  }
+
+  /* NAV */
+  .nav-item {
+    width: 55px !important;
+    height: 70px !important;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 70px 6% !important;
+  }
+
+  /* FOLDERS */
+  .folder-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ABOUT STACK */
+  .portrait-stack {
+    height: auto !important;
+  }
+
+  /* TEXT */
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .story-text {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* HERO */
+  .hero-content h1 {
+    font-size: 2.4rem !important;
+  }
+
+  /* NAV BOTTOM BAR */
+  .nav-wrapper {
+    bottom: 10px !important;
+  }
+
+  .nav-bar {
+    padding: 4px !important;
+    border-radius: 20px !important;
+  }
+
+  .nav-item {
+    width: 45px !important;
+    height: 60px !important;
+  }
+
+  .nav-item svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* ABOUT */
+  .about-grid,
+  .about-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* PRICING CARDS */
+  .folder-body {
+    padding: 25px !important;
+  }
+
+  .cost {
+    font-size: 2rem !important;
+  }
+
+  /* CONTACT */
+  .contact-title {
+    font-size: 2rem !important;
+  }
+
+  /* SPACING FIX */
+  .section {
+    padding: 60px 5% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    transform: translateX(-50%) scale(0.9);
+  }
+}
