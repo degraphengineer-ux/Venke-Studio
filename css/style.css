@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+*::selection {
+  background-color: var(--orange);
+}
+
 :root {
   --bg: #050505;
   --folder-color: #1a1a1a;
@@ -23,7 +27,7 @@ html {
   /* font */
   --heading-font: "Newsreader", serif;
   --body-font: "Mona Sans", sans-serif;
-  --code-font: "Space Grotesk", sans-serif;
+  --code-font: "Space Grotesk", monospace;
 }
 
 /* basic styles */
@@ -248,7 +252,7 @@ h3 {
 }
 
 .info-card.full {
-  grid-row: span 2;
+  grid-column: span 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -743,6 +747,7 @@ h3 {
 .input-group textarea {
   width: 100%;
   background: transparent;
+  font-family: var(--body-font);
   border: none;
   border-bottom: 1px solid #222;
   padding: 15px 0;
