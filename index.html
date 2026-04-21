@@ -268,28 +268,16 @@
 
       <div class="parallax-scroll-area">
         <div class="parallax-block">
-          <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200"
-            class="p-img"
-          />
+          <img src="" class="p-img" />
         </div>
         <div class="parallax-block">
-          <img
-            src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1200"
-            class="p-img"
-          />
+          <img src="" class="p-img" />
         </div>
         <div class="parallax-block">
-          <img
-            src="https://images.unsplash.com/photo-1426604966848-d7adac402bdb?q=80&w=1200"
-            class="p-img"
-          />
+          <img src="" class="p-img" />
         </div>
         <div class="parallax-block">
-          <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200"
-            class="p-img"
-          />
+          <img src="" class="p-img" />
         </div>
       </div>
     </section>
@@ -482,21 +470,42 @@
         </div>
 
         <div class="contact-form-container">
-          <form id="premium-form">
+          <form
+            id="premium-form"
+            action="https://formspree.io/f/mdaylwyb"
+            method="POST"
+          >
             <div class="input-group">
-              <input type="text" id="name" required placeholder=" " />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder=" "
+              />
               <label for="name">IDENTIFY_YOURSELF (NAME)</label>
               <div class="line-effect"></div>
             </div>
 
             <div class="input-group">
-              <input type="email" id="email" required placeholder=" " />
+              <input
+                type="email"
+                id="email"
+                required
+                name="email"
+                placeholder=" "
+              />
               <label for="email">RETURN_ADDRESS (EMAIL)</label>
               <div class="line-effect"></div>
             </div>
 
             <div class="input-group">
-              <textarea id="message" required placeholder=" "></textarea>
+              <textarea
+                id="message"
+                required
+                name="message"
+                placeholder=" "
+              ></textarea>
               <label for="message">PROJECT_BRIEF (MESSAGE)</label>
               <div class="line-effect"></div>
             </div>

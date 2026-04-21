@@ -802,6 +802,7 @@ h3 {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  font-family: var(--code-font);
 }
 
 .submit-btn:hover {
