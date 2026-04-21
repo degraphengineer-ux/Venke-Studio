@@ -248,16 +248,6 @@
     </section>
 
     <section id="gallery-overlay" class="gallery-overlay">
-      <div id="glitch-loader">
-        <div class="glitch-content">
-          <div class="glitch-text" data-text="DECRYPTING_DATA...">
-            DECRYPTING_DATA...
-          </div>
-          <div class="binary-code">
-            01001101 01000001 01010100 01010010 01001001 01011000
-          </div>
-        </div>
-      </div>
       <nav class="overlay-nav">
         <div class="nav-left">
           <div id="active-title">LOCAL_FILE: /URBAN_SIGHT</div>
@@ -275,13 +265,20 @@
           <button class="close-btn">CLOSE_FILE [ESC]</button>
         </div>
       </nav>
-      <div class="gallery-content-wrapper">
-        <aside id="project-sidebar">
-          <div class="sidebar-header">FILE_METADATA</div>
-          <div id="meta-container"></div>
-        </aside>
 
-        <div class="parallax-scroll-area"></div>
+      <div class="parallax-scroll-area">
+        <div class="parallax-block">
+          <img src="" class="p-img" />
+        </div>
+        <div class="parallax-block">
+          <img src="" class="p-img" />
+        </div>
+        <div class="parallax-block">
+          <img src="" class="p-img" />
+        </div>
+        <div class="parallax-block">
+          <img src="" class="p-img" />
+        </div>
       </div>
     </section>
 
@@ -384,12 +381,7 @@
       </div>
 
       <div class="pricing-grid">
-        <div
-          class="price-folder terminal-item"
-          data-price="200"
-          data-service="PORTRAIT_PKG"
-        >
-          <div class="status-bit">[STATUS: IDLE]</div>
+        <div class="price-folder">
           <div class="folder-tab"><span class="id">VOL_01</span></div>
           <div class="folder-body">
             <div class="tier-header">
@@ -405,12 +397,7 @@
           </div>
         </div>
 
-        <div
-          class="price-folder featured terminal-item"
-          data-price="500"
-          data-service="LS & PORTRAIT_PKG"
-        >
-          <div class="status-bit">[STATUS: IDLE]</div>
+        <div class="price-folder featured">
           <div class="folder-tab"><span class="id">VOL_02</span></div>
           <div class="folder-body">
             <div class="featured-badge">MOST_REQUESTED</div>
@@ -428,12 +415,7 @@
           </div>
         </div>
 
-        <div
-          class="price-folder terminal-item"
-          data-price="1000"
-          data-service="LANDSCAPE_PKG"
-        >
-          <div class="status-bit">[STATUS: IDLE]</div>
+        <div class="price-folder">
           <div class="folder-tab"><span class="id">VOL_03</span></div>
           <div class="folder-body">
             <div class="tier-header">
@@ -450,13 +432,6 @@
             <button type="button" class="select-btn">INITIALIZE_ORDER</button>
           </div>
         </div>
-      </div>
-
-      <div class="terminal-footer">
-        <div class="total-wrap">
-          TOTAL_ESTIMATE: $<span id="terminal-total">0</span>.00
-        </div>
-        <button class="magnetic btn-primary">INITIALIZE_BOOKING</button>
       </div>
     </section>
 

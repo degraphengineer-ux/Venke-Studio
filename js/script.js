@@ -1,26 +1,17 @@
 const projectData = {
-  urban: {
-    images: [
-      "./assets/images/venke-image_1.png",
-      "./assets/images/venke-image_2.png",
-      "./assets/images/venke-image_3.png",
-    ],
-    meta: { date: "2024.01.10", loc: "KALOBEYEI_CORE", tech: "23MM_DIGITAL" },
-  },
-  tech: {
-    images: [
-      "./assets/images/venke-image_4.png",
-      "./assets/images/venke-image_5.png",
-    ],
-    meta: { date: "2024.01.10", loc: "NAIROBI_CORE", tech: "35MM_DIGITAL" },
-  },
-  nature: {
-    images: [
-      "./assets/images/venke-image_4.png",
-      "./assets/images/venke-image_5.png",
-    ],
-    meta: { date: "2024.01.10", loc: "KAKUMA_CORE", tech: "34MM_DIGITAL" },
-  },
+  urban: [
+    "./assets/images/venke-image_1.png",
+    "./assets/images/venke-image_2.png",
+    "./assets/images/venke-image_3.png",
+  ],
+  tech: [
+    "./assets/images/venke-image_4.png",
+    "./assets/images/venke-image_5.png",
+  ],
+  nature: [
+    "./assets/images/venke-image_4.png",
+    "./assets/images/venke-image_5.png",
+  ],
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,29 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  function openGallery(displayName, imageArray, metaData) {
-    // 1. Update Title
+  function openGallery(displayName, imageArray) {
+    // Update Title in the Overlay Nav
     document.getElementById("active-title").innerText =
       `LOCAL_FILE: /${displayName.toUpperCase()}`;
 
     const scrollArea = document.querySelector(".parallax-scroll-area");
-    const metaContainer = document.getElementById("meta-container");
     const overlay = document.getElementById("gallery-overlay");
 
-    // 2. Clear previous content
+    // Clear previous images
     scrollArea.innerHTML = "";
-    if (metaContainer) metaContainer.innerHTML = ""; // Clear sidebar
 
-    // 3. Inject Metadata into Sidebar
-    if (metaData && metaContainer) {
-      metaContainer.innerHTML = `
-      <div class="meta-item"><span>ENCRYPTION_DATE</span>${metaData.date}</div>
-      <div class="meta-item"><span>GEOGRAPHIC_LOC</span>${metaData.loc}</div>
-      <div class="meta-item"><span>ACQUISITION_TECH</span>${metaData.tech}</div>
-    `;
-    }
-
-    // 4. Inject Images
+    // Inject new images from the array
     imageArray.forEach((imgSrc) => {
       const block = document.createElement("div");
       block.className = "parallax-block";
@@ -78,11 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollArea.appendChild(block);
     });
 
-    // 5. Animation Logic
+    // Open Overlay with GSAP
     gsap.set(overlay, { display: "block", opacity: 0 });
     gsap.to(overlay, { opacity: 1, duration: 0.5 });
+
+    // FIX: Prevent background body from scrolling
     document.body.style.overflow = "hidden";
 
+    // Slide up animation for images
     gsap.from(".parallax-block", {
       y: 100,
       opacity: 0,
@@ -91,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out",
     });
 
+    // Re-initialize Parallax for new elements
     refreshParallax();
   }
 
@@ -119,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
     folder.addEventListener("click", () => {
       const title = folder.getAttribute("data-gallery");
       const projectId = folder.getAttribute("data-project");
-      const project = projectData[projectId];
+      const images = projectData[projectId];
 
-      if (project) {
-        openGallery(title, project.images, project.meta);
+      if (images) {
+        openGallery(title, images);
       }
     });
   });
@@ -287,32 +271,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.to("#progress-bar", {
       width: progress + "%",
-    });
-  });
-
-  // [PART 3: INSIDE DOMContentLoaded]
-
-  let runningTotal = 0;
-  document.querySelectorAll(".terminal-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      const price = parseInt(item.getAttribute("data-price"));
-      const statusBit = item.querySelector(".status-bit");
-
-      if (item.classList.toggle("active-service")) {
-        runningTotal += price;
-        if (statusBit) statusBit.innerText = "[STATUS: ACTIVE]";
-      } else {
-        runningTotal -= price;
-        if (statusBit) statusBit.innerText = "[STATUS: IDLE]";
-      }
-
-      // Animate the price counter
-      gsap.to("#terminal-total", {
-        innerText: runningTotal,
-        duration: 0.8,
-        snap: { innerText: 1 },
-        ease: "power2.out",
-      });
     });
   });
 });
