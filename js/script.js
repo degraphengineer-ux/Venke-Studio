@@ -1,16 +1,27 @@
 const projectData = {
   urban: [
-    "./assets/images/venke-image_1.png",
-    "./assets/images/venke-image_2.png",
-    "./assets/images/venke-image_3.png",
+    "./assets/images/projects/project-1/project-1_1.jpg",
+    "./assets/images/projects/project-1/project-1_2.jpg",
+    "./assets/images/projects/project-1/project-1_3.jpg",
+    "./assets/images/projects/project-1/project-1_4.jpg",
+    "./assets/images/projects/project-1/project-1_5.jpg",
+    "./assets/images/projects/project-1/project-1_6.jpg",
+    "./assets/images/projects/project-1/project-1_7.jpg",
+    "./assets/images/projects/project-1/project-1_8.jpg",
   ],
   tech: [
-    "./assets/images/venke-image_4.png",
-    "./assets/images/venke-image_5.png",
+    "./assets/images/projects/project-2/project-2_1.jpg",
+    "./assets/images/projects/project-2/project-2_2.jpg",
+    "./assets/images/projects/project-2/project-2_3.jpg",
+    "./assets/images/projects/project-2/project-2_4.jpg",
   ],
   nature: [
-    "./assets/images/venke-image_4.png",
-    "./assets/images/venke-image_5.png",
+    "./assets/images/projects/project-3/project-3_1.jpg",
+    "./assets/images/projects/project-3/project-3_2.jpg",
+    "./assets/images/projects/project-3/project-3_3.jpg",
+    "./assets/images/projects/project-3/project-3_4.jpg",
+    "./assets/images/projects/project-3/project-3_5.jpg",
+    "./assets/images/projects/project-3/project-3_6.jpg",
   ],
 };
 

@@ -581,7 +581,7 @@ h3 {
 }
 
 .p-img {
-  width: 100%;
+  width: fit-content;
   height: 140%; /* Needed for the parallax 'y' travel room */
   object-fit: cover;
   will-change: transform;
